@@ -5,6 +5,7 @@ source "https://rubygems.org"
 # Check github versions: https://pages.github.com/versions/
 gem "github-pages", group: :jekyll_plugins
 gem "hitchens-theme"
+gem "jekyll-remote-theme"
 
 group :jekyll_plugins do
   gem 'jekyll-feed'

@@ -265,6 +265,7 @@ DEPENDENCIES
   hitchens-theme
   jekyll-feed
   jekyll-paginate
+  jekyll-remote-theme
   jekyll-seo-tag
   jekyll-sitemap
   tzinfo (~> 1.2)
