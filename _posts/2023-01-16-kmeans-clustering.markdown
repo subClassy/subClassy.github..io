@@ -213,3 +213,118 @@ since we are calculating Euclidean Distance between observations, the magnitude
 of the value is playing a huge role compared to the relative positioning of the 
 observations. Hence, it would be ideal to first scale the data and then do our 
 analysis.
+
+<br />
+
+| ![Box Plot](../assets/images/unscaled_horeca_swidth.png "Figure A.2.1") | ![Box Plot](../assets/images/scaled_horeca_swidth.png "Figure A.2.4") |
+|:--:| :--:| 
+| *Figure A.2.1* | *Figure A.2.4* |
+
+<div class="overflow-table custom-highlight">
+{% highlight R %}
+s_horeca_data <- scale(horeca_data)
+
+# Boxplot
+boxplot(horeca_data)
+boxplot(s_horeca_data)
+{% endhighlight %}
+</div>
+
+In the above code we first scale our data and then plot the boxplots for the 
+original and scaled data. In the boxplot for the scaled data (Fig A.2.3), we 
+can see that the values are now normalized and comparable to each other in 
+contrast to the boxplot of original values (Fig A.2.2) which are not.
+
+| ![Box Plot](../assets/images/horeca_boxplot.png "Figure A.2.2") | ![Box Plot](../assets/images/s_horeca_boxplot.png "Figure A.2.3") |
+|:--:| :--:| 
+| *Figure A.2.2* | *Figure A.2.3* |
+
+Now we can run our Silhouette Analysis again -
+
+<div class="overflow-table custom-highlight">
+{% highlight R %}
+fviz_nbclust(s_horeca_data, kmeans, method = "silhouette") +
+geom_vline(xintercept = 3, linetype = 2)
+{% endhighlight %}
+</div>
+
+Again, in Figure A.2.4, we see that the optimal number of clusters are still 2, 
+but the Silhouette Width for *k = 3* has increased from before and is now 
+comparable to one for *k = 2*. This is a good example of using domain knowledge 
+to guide us into a better estimate of the number of clusters. The reason for 
+*k = 2* being a better setting, might be due to an imbalance in the dataset. 
+However, that does not change the fact that our data still comes from three 
+categories - Hotels, Restaurants and Cafes. Thus, we can apply K-Means with 
+*k = 3*.
+
+#### K-Means in R
+
+To apply K-Means, we will simply use the *kmeans* method in R. For this, we 
+simply need to provide our dataset, the number of centers or k, and the maximum 
+number of iterations.
+
+<div class="overflow-table custom-highlight">
+{% highlight R %}
+# Kmeans with 3 clusters
+km <- kmeans(s_horeca_data, centers = 3, iter.max = 1000)
+{% endhighlight %}
+</div>
+
+We can look at the various parameters of the clustering including the centers, 
+the size of the clusters etc.
+
+
+<div class="overflow-table custom-highlight">
+{% highlight R %}
+# KMeans centers
+km$centers
+
+# Cluster sizes
+km$size
+{% endhighlight %}
+</div>
+
+<div class="overflow-table">
+{% highlight Shell %}
+> km$centers
+        Fresh       Milk    Grocery     Frozen Detergents_Paper Delicassen
+1 -0.06148558 -0.1969952 -0.3085586 -0.1028763       -0.2913875 -0.1257023
+2  1.97290334  2.5333669  2.0188911  2.6834788        0.1830949  1.9744612
+3 -0.37894629  0.4429893  1.5466342 -0.3638713        2.2145728  0.1260791
+> km$size
+[1] 252  14  32
+{% endhighlight %}
+</div>
+
+In the cluster size, we can see that the predicted clusters are quite 
+imbalanced which verifies our initial hypotheses about the data.
+
+#### Visualization and Analysis
+
+Now, we can look at the visualization of these clusters. Again we will use the 
+*factoextra* package for this. We are dealing 6-dimensional data and visualizing 
+that is impossible. For this reason, the plot being used automatically 
+calculates the two principal components and visualizes the clusters along those 
+components.
+
+<div class="overflow-table custom-highlight">
+{% highlight R %}
+# Visualization
+fviz_cluster(km, data = s_horeca_data,
+            main = "K-Means Clustering Plot")
+{% endhighlight %}
+</div>
+
+The output as seen in Figure A.2.5 shows that the clusters are quite well 
+separated. The red cluster is the most densely populated and, hence, contains 
+the highest number of observations i.e., 252. The other two clusters are 
+localized to some degree, but they stretch to reach the outliers as well.
+
+<br />
+
+| ![Box Plot](../assets/images/k_mean_cluster.png "Figure A.2.5") | 
+|:--:| 
+| *Figure A.2.5* |
+
+This concludes this blog about using K-Means in R. In the next blog I will talk
+about using other clustering techniques.
