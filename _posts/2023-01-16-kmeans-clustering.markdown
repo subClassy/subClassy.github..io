@@ -3,6 +3,9 @@ layout: post
 title:  "K-Means Clustering"
 date:   2023-01-16 17:35:49 +0530
 categories: kmeans clustering
+permalink: kmeans-clustering
+description: K-Means Clustering for the Wholesale Dataset from the UCI
+             Machine Learning repository
 ---
 In this article, we will look into K-Means Clustering and implement it in R. We
 will use the Wholesale Dataset from the UCI Machine Learning Repository to do
