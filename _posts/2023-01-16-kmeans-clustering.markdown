@@ -66,7 +66,7 @@ The output of the plot is as show in Figure A.1.1. In this we can see that the
 Region 3 which corresponds to "Others" is heavily overpowering the other two 
 categories and hence it does provide much information to the data.
 
-| ![Histogram Plot](../assets/images/hist_region.png "Figure A.1.1") | 
+| ![Histogram Plot](../assets/images/kmeans/hist_region.png "Figure A.1.1") | 
 |:--:| 
 | *Figure A.1.1* |
 
@@ -128,7 +128,7 @@ Max.   :60869.0   Max.   :40827.0   Max.   :47943.0
 
 And the box plot for the same can be seen in Figure A.1.2.
 
-| ![Box Plot](../assets/images/boxplot_data.png "Figure A.1.2") | 
+| ![Box Plot](../assets/images/kmeans/boxplot_data.png "Figure A.1.2") | 
 |:--:| 
 | *Figure A.1.2* |
 
@@ -216,7 +216,7 @@ analysis.
 
 <br />
 
-| ![Box Plot](../assets/images/unscaled_horeca_swidth.png "Figure A.2.1") | ![Box Plot](../assets/images/scaled_horeca_swidth.png "Figure A.2.4") |
+| ![Box Plot](../assets/images/kmeans/unscaled_horeca_swidth.png "Figure A.2.1") | ![Box Plot](../assets/images/kmeans/scaled_horeca_swidth.png "Figure A.2.4") |
 |:--:| :--:| 
 | *Figure A.2.1* | *Figure A.2.4* |
 
@@ -235,7 +235,7 @@ original and scaled data. In the boxplot for the scaled data (Fig A.2.3), we
 can see that the values are now normalized and comparable to each other in 
 contrast to the boxplot of original values (Fig A.2.2) which are not.
 
-| ![Box Plot](../assets/images/horeca_boxplot.png "Figure A.2.2") | ![Box Plot](../assets/images/s_horeca_boxplot.png "Figure A.2.3") |
+| ![Box Plot](../assets/images/kmeans/horeca_boxplot.png "Figure A.2.2") | ![Box Plot](../assets/images/kmeans/s_horeca_boxplot.png "Figure A.2.3") |
 |:--:| :--:| 
 | *Figure A.2.2* | *Figure A.2.3* |
 
@@ -322,7 +322,7 @@ localized to some degree, but they stretch to reach the outliers as well.
 
 <br />
 
-| ![Box Plot](../assets/images/k_mean_cluster.png "Figure A.2.5") | 
+| ![Box Plot](../assets/images/kmeans/k_mean_cluster.png "Figure A.2.5") | 
 |:--:| 
 | *Figure A.2.5* |
 
