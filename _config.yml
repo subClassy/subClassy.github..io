@@ -24,9 +24,10 @@ description: >- # this means to ignore newlines until "baseurl:"
   Exploring and expanding the boundaries of computer vision through simple 
   engineering.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://subclassy.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sub_classy_03
 github_username:  subClassy
+google_analytics: G-YME5GPFJGJ
 
 # Build settings
 # theme: hitchens-theme
