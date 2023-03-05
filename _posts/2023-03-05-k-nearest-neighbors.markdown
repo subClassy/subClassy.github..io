@@ -191,3 +191,6 @@ cross validation to get a more thorough idea about the optimal value of 'k'.
 | ![k-NN trend for 'k'](../assets/images/knn/knn_accuracy.png "Figure A.1.2") | 
 |:--:| 
 | *Figure A.1.2* |
+
+With this I complete the analysis on the Wholesale Dataset starting from two 
+clustering algorithms and ending it with a classification technique.
