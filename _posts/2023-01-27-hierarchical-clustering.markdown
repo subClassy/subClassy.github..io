@@ -8,7 +8,7 @@ description: Hierarchical Clustering for the Wholesale Dataset from the UCI
              Machine Learning repository
 ---
 
-In the previous [article](https://subclassy.github.io/kmeans-clustering/), I
+In the previous [article](https://subclassy.github.io/kmeans-clustering), I
 talked about the Wholesale Dataset from the UCI Machine Learning Repository. And
 then I implemented K-Means on the dataset in R. In this article, I will again 
 use the same dataset including all the same pre-processing and then apply 

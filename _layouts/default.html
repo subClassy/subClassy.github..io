@@ -53,16 +53,21 @@
 
   </body>
 </html>
-<!-- <script type="text/javascript">
-    $("script[type='math/tex']").replaceWith(
-      function(){
-        var tex = $(this).text();
-        return katex.renderToString(tex, {displayMode: false});
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function(){
+    function stripcdata(x) {
+      if (x.startsWith('% <![CDATA[') && x.endsWith('%]]>'))
+        return x.substring(11,x.length-4);
+      return x;
+    }
+    document.querySelectorAll("script[type='math/tex']").forEach(function(el){
+      el.outerHTML = "\\(" + stripcdata(el.textContent) + "\\)";
     });
-    
-    $("script[type='math/tex; mode=display']").replaceWith(
-      function(){
-        var tex = $(this).text();
-        return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+    document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el){
+      el.outerHTML = "\\[" + stripcdata(el.textContent) + "\\]";
     });
-  </script>   -->
+    var script = document.createElement('script');
+    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js";
+    document.head.appendChild(script);
+  }, false);
+</script>
