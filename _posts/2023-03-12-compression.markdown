@@ -7,6 +7,10 @@ permalink: compression
 description: Discover the differences between H.265 and AV1 video compression 
             standards and their impact on visual quality, hardware support, and 
             licensing in our in-depth comparison.
+image:
+  path: ../assets/images/compression/compress_vs_crf.png
+  height: 342
+  width: 228
 ---
 Currently, the amount of video traffic is growing exponentially and so is the 
 availability of high-resolution videos from mobile devices. However, this also 
