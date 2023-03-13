@@ -8,9 +8,9 @@ description: Discover the differences between H.265 and AV1 video compression
             standards and their impact on visual quality, hardware support, and 
             licensing in our in-depth comparison.
 image:
-  path: ..assets/images/compression/jj-ying-WmnsGyaFnCQ-unsplash.jpg
-  height: 342
-  width: 228
+  path: ../assets/images/compression/jj-ying-WmnsGyaFnCQ-unsplash.jpg
+  height: 1200
+  width: 630
 ---
 Currently, the amount of video traffic is growing exponentially and so is the 
 availability of high-resolution videos from mobile devices. However, this also 
