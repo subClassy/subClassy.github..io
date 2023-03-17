@@ -6,6 +6,7 @@ categories: k nearest neighbors classification
 permalink: k-nearest-neighbors
 description: K-Nearest Neighbor classification on the Wholesale Dataset from 
              the UCI Machine Learning repository
+comments: true
 ---
 
 In the last two articles on 

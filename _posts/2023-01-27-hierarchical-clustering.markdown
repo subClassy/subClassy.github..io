@@ -6,6 +6,7 @@ categories: hierarchical clustering
 permalink: hierarchical-clustering
 description: Hierarchical Clustering for the Wholesale Dataset from the UCI
              Machine Learning repository
+comments: true
 ---
 
 In the previous [article](https://subclassy.github.io/kmeans-clustering), I

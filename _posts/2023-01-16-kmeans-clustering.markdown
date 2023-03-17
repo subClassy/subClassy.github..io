@@ -6,6 +6,7 @@ categories: kmeans clustering
 permalink: kmeans-clustering
 description: K-Means Clustering for the Wholesale Dataset from the UCI
              Machine Learning repository
+comments: true
 ---
 In this article, we will look into K-Means Clustering and implement it in R. We
 will use the Wholesale Dataset from the UCI Machine Learning Repository to do
