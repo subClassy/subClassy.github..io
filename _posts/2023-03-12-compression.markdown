@@ -11,6 +11,7 @@ image:
   path: ../assets/images/compression/jj-ying-WmnsGyaFnCQ-unsplash.jpg
   height: 1200
   width: 630
+comments: true
 ---
 Currently, the amount of video traffic is growing exponentially and so is the 
 availability of high-resolution videos from mobile devices. However, this also 

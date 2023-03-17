@@ -28,6 +28,7 @@ url: "https://subclassy.github.io" # the base hostname & protocol for your site,
 twitter_username: sub_classy_03
 github_username:  subClassy
 google_analytics: G-YME5GPFJGJ
+disqus.shortname: https-subclassy-github-io
 
 # Build settings
 # theme: hitchens-theme
