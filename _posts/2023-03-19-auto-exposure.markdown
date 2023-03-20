@@ -90,7 +90,18 @@ algorithm. Most cameras have multiple metering options -
   etc., to determine the next exposure settings.</li>
 </ol>
 
+#### Conclusion
+
+Auto Exposure is an essential feature in modern cameras. It allows users to 
+capture high-quality images in a variety of lighting conditions, without 
+needing to manually adjust the camera settings. With the help of advanced 
+hardware and software algorithms, Auto Exposure algorithms continue to improve, 
+producing better results with each new generation of cameras.
+
+Next week, I will talk about the ongoing research in Auto-Exposure algorithms
+and talk about a few research papers that lead the way.
+
 ##### References
 [1] Bégin, Marc-André, and Ian Hunter. 
 ["Auto-Exposure Algorithm for Enhanced Mobile Robot Localization in Challenging Light Conditions."](https://www.youtube.com/watch?v=Guvhvb-uQpE&ab_channel=Marc-Andr%C3%A9B%C3%A9gin) Sensors 22.3 (2022): 835.
-[2] https://photographylife.com/understanding-metering-modes
+<p>[2] https://photographylife.com/understanding-metering-modes<p>
