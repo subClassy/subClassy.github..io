@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+comments: false
 ---
 
 ![My profile](../assets/images/profile.jpg)

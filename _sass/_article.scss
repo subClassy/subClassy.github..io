@@ -104,3 +104,8 @@ table img {
     justify-content: space-around;
     margin: 2em 8em;
 }
+
+img[alt=metering] { 
+    width: 60%;
+    margin: auto;
+}

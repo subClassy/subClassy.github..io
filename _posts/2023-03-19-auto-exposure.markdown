@@ -56,7 +56,41 @@ with less noise.
 
 This tradeoff between exposure and gain can be seen in Figure A.1 [1]
 
+#### Conventional Auto-Exposure Algorithms
+
+The vast majority of point and shoot cameras use a very generic and "safe" way
+to adjust exposure settings in the camera. These update sequence is shown below
+in Figure A.2.
+
+| ![metering](../assets/images/autoexposure/metering.png "Figure A.2") | 
+|:--:| 
+| *Figure A.2* |
+
+As can be seen above, for every frame T, the algorithm uses something called as "metering"
+to determine the amount of light that is reaching the camera sensor and sends 
+this information to the smartphone's processor, which then analyzes the data 
+and adjusts the camera settings accordingly to capture the next frame T+1. This
+constant adjustment is what we would see in the camera's viewfinder.
+
+In the above paragraph I mentioned "metering". This is the core of the above 
+algorithm. Most cameras have multiple metering options - 
+<ol>
+  <li>Spot Metering - In this the camera focuses on a small specific
+  area of the frame and adjusts the exposure settings accordingly. This is what
+  generally happens when it detects a face in the photo or you manually tap an area
+  in your viewfinder. </li>
+  <li>Average Metering - As the name suggests, the brightness of the entire
+  image is used and averaged to determine the new settings.</li>
+  <li>Center-weighted Average Metering - This is an amalgamation of the above two.
+  In this the entire image is used as a reference, but the center of the image is given
+  higher weightage.</li>
+  <li>Matrix Metering - This is the most common metering mode and is the default
+  as well. This mode divides the image into multiple zones and analyzes these 
+  zones individually. The decision making involves colors, distance, highlights, 
+  etc., to determine the next exposure settings.</li>
+</ol>
 
 ##### References
 [1] Bégin, Marc-André, and Ian Hunter. 
 ["Auto-Exposure Algorithm for Enhanced Mobile Robot Localization in Challenging Light Conditions."](https://www.youtube.com/watch?v=Guvhvb-uQpE&ab_channel=Marc-Andr%C3%A9B%C3%A9gin) Sensors 22.3 (2022): 835.
+[2] https://photographylife.com/understanding-metering-modes
