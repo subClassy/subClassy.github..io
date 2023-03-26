@@ -178,9 +178,9 @@ Hence for the purpose of this discussion, we will only consider the software bas
 Also, since we established that we get similar quality of image at *CRF=27* for AV1 and 
 *CRF=21* for H.265, we will restrict our discussion to these specific configurations. H.265 takes 2.83s
 on average to encode the entire data and takes 1.74s to decode the same. AV1 on the other hand
-takes a whopping 445.799s to encode while 2.865s to decode. Ahh! so heres the catch,
+takes a whopping 445.799s to encode while 2.865s to decode. Ahh! so here's the catch,
 AV1 is so good but it takes so much time to process. In any real-time system, this would be
-a dealbreaker.
+a deal breaker.
 
 However, like any good algorithm, AV1 provides some dials that we can tune to achieve
 better computation speeds at some loss of quality. I would suggest to look into
@@ -200,5 +200,5 @@ completely free to use and is not subject to any licensing fees or royalties.
 In conclusion, both H.265 and AV1 offer significant improvements over previous 
 compression standards, and both have their own unique strengths and weaknesses. 
 While H.265 is widely supported and offers hardware support but it comes with a licensing issue.
-AV1 has the potential to surpass H.265 in terms of the comprrssion compression 
+AV1 has the potential to surpass H.265 in terms of the compression 
 efficiency and visual quality, and its royalty-free status makes it an attractive option. 
