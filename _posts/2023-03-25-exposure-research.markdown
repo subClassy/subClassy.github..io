@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "From Point and Shoot to AI: The Evolution of Auto Exposure Algorithms"
+title:  "The Evolution of Auto Exposure Algorithms"
 date:   2023-03-25 01:03:00 -0700
 categories: auto-exposure shutter speed gain exposure
 permalink: ae-research
 description: Explore the cutting-edge innovations in auto-exposure algorithms 
-             for digital photography and computer vision tasks. In this blog, I 
+             for computer vision tasks. In this blog, I 
              discuss five recent research papers and talk about the 
              advancements in this fascinating field. 
 image:
-  path: ../assets/images/assets/ae-research/dan-dimmock-3mt71MKGjQ0-unsplash.jpg
+  path: ../assets/images/ae-research/dan-dimmock-3mt71MKGjQ0-unsplash.jpg
   height: 1200
   width: 630
 comments: true
