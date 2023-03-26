@@ -109,3 +109,25 @@ img[alt=metering] {
     width: 60%;
     margin: auto;
 }
+
+subheading h5{
+    font-style: normal;
+    text-align: left;
+}
+
+.research-table, .research-table th, .research-table td {
+    border: 1px solid black;
+}
+
+.research-table thead {
+    background: $highlight;
+    font-weight: bold;
+}
+
+.research-table td {
+    padding: 12px;
+}
+
+.research-table {
+    margin-top: 12px;
+}
