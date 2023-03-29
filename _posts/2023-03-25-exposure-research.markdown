@@ -327,7 +327,6 @@ The following table consists of a summary of the above five algorithms -
         </tr>
     </tbody>
 </table>
-</a>
 
 #### References
 
