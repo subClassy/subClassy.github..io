@@ -19,7 +19,8 @@ Auto exposure algorithms are an essential feature of digital cameras, helping to
 ensure that images are captured with the appropriate exposure levels in a wide 
 range of lighting conditions. I discussed this in great detail in my last 
 [blog](https://subclassy.github.io/auto-exposure). While these algorithms have 
-traditionally been designed with consumer photography in mind, recent academic research has taken a different approach. Instead of focusing on 
+traditionally been designed with consumer photography in mind, recent academic 
+research has taken a different approach. Instead of focusing on 
 consumer goods, the latest research papers are geared toward acquiring the 
 best possible images for computer vision tasks and algorithms including 
 autonomous vehicles, facial recognition, and virtual reality. To develop more 
