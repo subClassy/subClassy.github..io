@@ -8,7 +8,7 @@ description: Explore the importance and methods of Explainable AI (XAI) in
              modern technology, including ChatGPT. Understand its potential 
              to shape the future of tech.
 image:
-  path: ../assets/images/xai-chatgpt/xai-chatgpt.png
+  path: ../assets/images/xai-chatgpt/meme.png
   height: 1200
   width: 630
 comments: true
