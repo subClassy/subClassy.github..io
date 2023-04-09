@@ -90,10 +90,49 @@ symbol.
 Finally, frame reconstruction is performed by adding predicted frame and 
 reconstructed residual.
 
+This paper is interesting because it does not use an explicit Generative Model,
+but the architecture is similar to an auto-encoder in various stages of the 
+pipeline. This paper has become the guiding light for many other papers in this
+area which improve upon this basic architecture.
+
 <subheading><h5>
 <a href="https://proceedings.neurips.cc/paper/2019/file/f1ea154c843f7cf3677db7ce922a2d17-Paper.pdf">[2]</a>
 <mark>Deep Generative Video Compression</mark>
 </h5></subheading>
+
+This paper comes from Disney Research. In this paper Han et al., builds upon 
+the work done in Variation Auto-Encoders (VAE) for neural image compression and 
+use it to model sequential data and jointly learn to transform the original 
+sequence into a lower-dimensional representation as well as to discretize and 
+entropy code this representation according to predictions of the sequential VAE.
+
+This paper was the first to propose a core generative approach for video 
+compression. If you want to get into the maths of it all, I would suggest you
+to read the paper. Shown below is the high-level operational diagram of the 
+proposed compression codec. A video segment is encoded into per-frame latent 
+variables $$z_t$$ and also into a per-segment global state $$f$$ (which I have
+omitted from the diagram for simplicity) using a VAE architecture. The latent 
+variables are then quantized and arithmetically encoded into binary according 
+to the respective prior models. To recover an approximation to the original 
+video, the latent variables are arithmetically decoded from the binary and 
+passed through the neural decoder.
+
+| ![han_2019](../assets/images/deep-video-compression/han_2019.png "Figure A.2") | 
+|:--:| 
+| *Figure A.2 [2]* |
+
+The most interesting part of the paper is the use of a temporally-conditioned
+prior distribution parameterized by the VAE to code the latent variables 
+associated with each frame. This is what separates this paper from full compression
+algorithms.
+
+The proposed architecture also splits up the latent code into global and local 
+variables which I have removed from the diagram. The global variables are 
+inferred from all video frames in a sequence and may contain global information,
+while the local variables are only inferred from a single frame. 
+
+This paper is a very good read and I would recommend it to anyone who is diving
+into the world of generative modelling.
 
 #### References
 
