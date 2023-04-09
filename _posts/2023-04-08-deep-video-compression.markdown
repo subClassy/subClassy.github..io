@@ -3,7 +3,7 @@ layout: post
 title:  "Deep Video Compression"
 date:   2023-04-08 14:53:00 -0700
 categories: compression 
-permalink: compression
+permalink: deep-compression
 description: Deep Video Compression
 image:
   path: ../assets/images/compression/jj-ying-WmnsGyaFnCQ-unsplash.jpg
@@ -46,6 +46,11 @@ discretized and entropy coded to produce a compressed bitstream that can be
 transmitted or stored.
 
 #### Research Papers
+
+In this section, I will review four papers that have been published in the last
+few years. I have not chosen these papers as just the state-of-the-art, but I 
+have chosen this papers because they each present a unique and different approach
+to the same problem. 
 
 <subheading><h5>
 <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Lu_DVC_An_End-To-End_Deep_Video_Compression_Framework_CVPR_2019_paper.pdf">[1]</a>
@@ -132,7 +137,91 @@ inferred from all video frames in a sequence and may contain global information,
 while the local variables are only inferred from a single frame. 
 
 This paper is a very good read and I would recommend it to anyone who is diving
-into the world of generative modelling.
+into the world of generative models.
+
+<subheading><h5>
+<a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Tian_Self-Conditioned_Probabilistic_Learning_of_Video_Rescaling_ICCV_2021_paper.pdf">[3]</a>
+<mark>Self-Conditioned Probabilistic Learning of Video Rescaling</mark>
+</h5></subheading>
+
+This paper by Tian et al., is a very interesting paper becauses this is a 
+video rescaling algorithm instead of video compression. However, they propose
+an application of their algorithm to video compression that can be trained 
+end-to-end.
+
+The authors propose a self-conditioned probabilistic framework, which 
+simultaneously learns paired downscaling and upscaling procedures. The rescaling
+framework consists of three components: 
+1. a frequency analyzer,
+2. a spatial-temporal prior network (STP-Net), and 
+3. a frequency synthesizer. 
+
+During the downscaling procedure, the frequency analyzer converts a 
+high-resolution video into low-frequency and high-frequency components. 
+The low-frequency component is quantized to produce a low-resolution video, 
+while the high-frequency component is discarded. During the upscaling procedure,
+the STP-Net predicts the probability density function of the high-frequency 
+component conditioned on the low-resolution video - $$p(f_h|x_l)$$, by modelling 
+a Gaussian Mixtures Model (GMM).
+
+A sample of the high-frequency component is then drawn from this distribution 
+and combined with the low-resolution video using the frequency synthesizer to 
+reconstruct the original high-resolution video. 
+
+In terms of video compression, the paper claims that compressing the down-scaled
+videos using a standard video codec like H.265 can achieve a better compression 
+ratio than compressing the original high-resolution videos. But since, video
+codecs are non-differential, the authors propose a differentiable surrogate
+using a DNN to approximate the H.265 codec. This is shown in the image below.
+
+| ![tian_2021](../assets/images/deep-video-compression/tian_2021.png "Figure A.3") | 
+|:--:| 
+| *Figure A.3 [3]* |
+
+<subheading><h5>
+<a href="https://arxiv.org/pdf/2207.05315.pdf">[4]</a>
+<mark>CANF-VC: Conditional Augmented Normalizing Flows for Video Compression</mark>
+</h5></subheading>
+
+This paper by Ho et al., proposes a video compression framework using 
+Conditional Augmented Normalizing Flows (CANFs) which are an extension of 
+Normalizing Flows (NFs) to the conditional setting. Normalizing flows are 
+generative models that produce tractable distributions by transforming a simple 
+probability distribution into a more complex and flexible one through a sequence
+of invertible and differentiable functions. These functions must have analytical
+inverses and follow the rule for change of variables. By repeatedly applying the
+rule for change of variables, the initial density ‘flows’ through the sequence 
+of invertible mappings. If you want to learn more about Normalizing Flows, I 
+recommend you to watch this [video](https://youtu.be/3KUvxIOJD0k) from the 
+University of Waterloo.
+
+The authors suggest the use of Augmented Normalizing Flows (ANFs) since its a 
+more generalized generative model and has superior expressive power to VAEs. They
+draw this idea from ANFIC[6] which uses ANFs for image compression.
+
+| ![ho_2022](../assets/images/deep-video-compression/ho_2022.png "Figure A.4") | 
+|:--:| 
+| *Figure A.4 [4]* |
+
+The architecture of this approach has two major components:
+1. CANF inter-frame coder: which encodes a video frame conditionally, give the
+motion compensated frame - $$p(x_t |  x_c)$$
+2. CANF motion coder: which shares a similar architecture to the inter-frame 
+coder, with the coding frame replaced by an optical flow map and the 
+motion-compensated frame replaced by an extrapolated flow map. The flow map is 
+estimated by PWC-Net and serves to warp the reference frame, with the warped 
+result further enhanced by a motion compensation network.
+
+The decoding process updates the motion-compensated frame successively to 
+reconstruct the target frame. The quantized latent is then recovered and decoded
+to update the motion-compensated frame, which is then encoded conditionally 
+based on its previous state in order to update the latent. This process is 
+repeated until the reconstructed version of the target frame is achieved.
+
+This is a very well written paper and the above summary does not justify the 
+complexity of the paper. I would recommend you to read the paper if you are 
+interested aboyut this approach.
+
 
 #### References
 
@@ -140,3 +229,11 @@ into the world of generative modelling.
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019.
 
 [2] Lombardo, Salvator, et al. "[Deep generative video compression.](https://proceedings.neurips.cc/paper/2019/file/f1ea154c843f7cf3677db7ce922a2d17-Paper.pdf)" Advances in Neural Information Processing Systems 32 (2019).
+
+[3] Tian, Yuan, et al. "[Self-conditioned probabilistic learning of video rescaling.](https://openaccess.thecvf.com/content/ICCV2021/papers/Tian_Self-Conditioned_Probabilistic_Learning_of_Video_Rescaling_ICCV_2021_paper.pdf)" 
+Proceedings of the IEEE/CVF international conference on computer vision. 2021.
+
+[4] Ho, Yung-Han, et al. "[Canf-vc: Conditional augmented normalizing flows for video compression.](https://arxiv.org/pdf/2207.05315.pdf)" 
+Computer Vision–ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part XVI. Cham: Springer Nature Switzerland, 2022.
+
+[5] Ho, Yung-Han, et al. "[Anfic: Image compression using augmented normalizing flows.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9623351)" IEEE Open Journal of Circuits and Systems 2 (2021): 613-626.
