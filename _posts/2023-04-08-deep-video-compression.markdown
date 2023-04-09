@@ -1,12 +1,17 @@
 ---
 layout: post
-title:  "Deep Video Compression"
+title:  "Video Compression using Generative Models"
 date:   2023-04-08 14:53:00 -0700
-categories: compression 
+categories: compression generative ai video deep-learning
 permalink: deep-compression
-description: Deep Video Compression
+description: Generative models are a powerful tool in the field of video 
+             compression, and recent research papers demonstrate their potential
+             to significantly improve the quality of compressed video while 
+             reducing the amount of data required to store and transmit it. In 
+             this blog, I summarize four of these papers and explore the ways 
+             in which generative models are revolutionizing video compression. 
 image:
-  path: ../assets/images/compression/jj-ying-WmnsGyaFnCQ-unsplash.jpg
+  path: ../assets/images/deep-video-compression/chuttersnap-E2mCFyp5D5E-unsplash.jpg
   height: 1200
   width: 630
 comments: true
