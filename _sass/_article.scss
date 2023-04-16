@@ -135,8 +135,16 @@ subheading h5{
     width: 101%;
 }
 
-.chatgpt-meme-drake {
+.chatgpt-meme-drake, .neuromorphic {
     margin-left: 25px;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.neuromorphic {
+    float: right;
+}
+
+.neuromorphic img {
+    margin-top: 0;
 }
