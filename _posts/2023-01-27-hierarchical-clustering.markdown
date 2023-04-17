@@ -14,7 +14,7 @@ talked about the Wholesale Dataset from the UCI Machine Learning Repository. And
 then I implemented K-Means on the dataset in R. In this article, I will again 
 use the same dataset including all the same pre-processing and then apply 
 Hierarchical Clustering in R (hence, I will recommend you to read that 
-[article](https://subclassy.github.io/kmeans-clustering/) first if you haven't 
+[article](https://subclassy.github.io/kmeans-clustering) first if you haven't 
 already).
 
 The main idea behind Hierarchical Clustering is that it creates a sequence of 
