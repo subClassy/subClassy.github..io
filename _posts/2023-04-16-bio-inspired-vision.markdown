@@ -8,8 +8,7 @@ description: We explore the fascinating field of bio-inspired computer vision,
              from the early history of camera design inspired by the human eye, 
              to the latest innovations in neuromorphic cameras that mimic the 
              visual system. Discover how biology has inspired engineering and 
-             led to the development of cutting-edge technologies that can help 
-             address some of the world's most pressing challenges. 
+             led to the development of cutting-edge technologies. 
 image:
   path: ../assets/images/bio-vision/robot-w-eyes.png
   height: 1200
