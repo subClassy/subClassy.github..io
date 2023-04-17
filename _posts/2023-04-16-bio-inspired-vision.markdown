@@ -2,15 +2,16 @@
 layout: post
 title:  "Bio-inspired Computer Vision"
 date:   2023-04-08 14:53:00 -0700
-categories: compression generative ai video deep-learning
-permalink: deep-compression
-description: Recent research papers demonstrate the potential of generative models
-             to significantly improve the quality of compressed video while 
-             reducing the amount of data required to store and transmit it. In 
-             this blog, I summarize four of these papers and explore the ways 
-             in which generative models are revolutionizing video compression. 
+categories: Hassenstein-Reichardt Detector Neuromorphic Vision Spiking Neural Networks snn
+permalink: bio-vision
+description: We explore the fascinating field of bio-inspired computer vision, 
+             from the early history of camera design inspired by the human eye, 
+             to the latest innovations in neuromorphic cameras that mimic the 
+             visual system. Discover how biology has inspired engineering and 
+             led to the development of cutting-edge technologies that can help 
+             address some of the world's most pressing challenges. 
 image:
-  path: ../assets/images/deep-video-compression/chuttersnap-E2mCFyp5D5E-unsplash.jpg
+  path: ../assets/images/bio-vision/robot-w-eyes.png
   height: 1200
   width: 630
 comments: true
