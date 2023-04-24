@@ -9,6 +9,10 @@ description: This blog provides an introduction to PyTorch Lightning, a
              learning models. Using a simple computer vision example, the blog 
              walks through the key features of PyTorch Lightning, as well as 
              best practices for performance optimization. 
+image:
+  path: ../assets/images/pytorch-lightning/christian-englmeier-J7EUjSlNQtg-unsplash.png
+  height: 1200
+  width: 630
 comments: true
 ---
 
