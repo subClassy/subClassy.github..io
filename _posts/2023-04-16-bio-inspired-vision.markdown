@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bio-inspired Computer Vision"
-date:   2023-04-08 14:53:00 -0700
+date:   2023-04-16 14:53:00 -0700
 categories: Hassenstein-Reichardt Detector Neuromorphic Vision Spiking Neural Networks snn
 permalink: bio-vision
 description: We explore the fascinating field of bio-inspired computer vision, 
